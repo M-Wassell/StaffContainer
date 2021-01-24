@@ -1,22 +1,39 @@
-﻿@model StaffContainer.ViewModels.HomeDetailsViewModel
+﻿@model HomeDetailsViewModel
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
-    <h3>@Model.PageTitle</h3>
+@{
 
-    <div>
-        Name: @Model.Products.Name
+    ViewBag.Title = "Product Details";
+}
+
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.Products.Name</h1>
+            </div>
+            <div class="card-body text-centre">
+
+                <img class="card-img-top" src="~/Images/threeAmigos.jpg" />
+
+                <h4>Products ID : @Model.Products.Id</h4>
+                <h4>Product Name : @Model.Products.Name</h4>
+                <h4>Product Description : @Model.Products.Description</h4>
+                <h4>Product Availability : @Model.Products.Remaining</h4>
+                <h4>Product Price : @Model.Products.Price</h4>
+            </div>
+            <div class="card-footer text-centre">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Back</a>
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-primary">Delete</a>
+            </div>
+        </div>
     </div>
-    <div>
-        Price:£@Model.Products.Price
-    </div>
-    <div>
-        Amount left: @Model.Products.Remaining
-    </div>
+</div>
 
 
-</body>
-</html>
+@section Scripts{
+    <script src="~/js/CustomScript.js"></script>
+
+} 
+
+

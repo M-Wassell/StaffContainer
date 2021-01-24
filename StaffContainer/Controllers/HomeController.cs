@@ -22,11 +22,11 @@ namespace StaffContainer.Controllers
             var model = _productsRepository.GetAllProducts();
             return View(model);
         }
-        public ViewResult Details()
+        public ViewResult Details(int id)
         {
             HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
             {
-                Products = _productsRepository.GetProducts(2),
+                Products = _productsRepository.GetProducts(id),
                 PageTitle = "Product Details"
 
             };
