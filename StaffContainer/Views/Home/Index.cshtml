@@ -1,0 +1,31 @@
+﻿@model IEnumerable<StaffContainer.Models.Products>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Remaining</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var products in Model)
+            {
+            <tr>
+                <td>@products.Id</td>
+                <td>@products.Name</td>
+                <td>@products.Price</td>
+                <td>@products.Remaining</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
