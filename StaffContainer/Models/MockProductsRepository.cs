@@ -18,7 +18,7 @@ namespace StaffContainer.Models
                     Name = "Pen",
                     Description = "Black Pen",
                     Price = 5,
-                    Remaining = 10
+                    Remaining = Remaining.Available,
                 },
                 new Products()
                 {
@@ -26,7 +26,7 @@ namespace StaffContainer.Models
                     Name = "Paper",
                     Description = "Lined Paper",
                     Price = 2,
-                    Remaining = 10
+                    Remaining = Remaining.Available
                 },
                 new Products()
                 {
@@ -34,7 +34,7 @@ namespace StaffContainer.Models
                     Name = "Plant",
                     Description = "Cactus",
                     Price = 10,
-                    Remaining = 10
+                    Remaining = Remaining.Unavailable
                 },
             };
         }
