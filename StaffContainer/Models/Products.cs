@@ -14,9 +14,10 @@ namespace StaffContainer.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
-        [Required(ErrorMessage ="A Price must be inserted")]
-        public double Price { get; set; }
-        public Remaining Remaining { get; set; }
+        [Required(ErrorMessage = "A Price must be inserted")]
+        public double? Price { get; set; }
+        [Required(ErrorMessage ="Please select stock state")]
+        public Remaining? Remaining { get; set; }
         
 
     }
