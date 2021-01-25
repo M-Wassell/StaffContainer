@@ -9,5 +9,6 @@ namespace StaffContainer.Models
     {
         Products GetProducts(int Id);
         IEnumerable<Products> GetAllProducts();
+        Products Add(Products products);
     }
 }
