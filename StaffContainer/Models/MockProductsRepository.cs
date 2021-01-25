@@ -38,6 +38,13 @@ namespace StaffContainer.Models
                 },
             };
         }
+        //Does this method work correctly?
+        public Products Add(Products products)
+        {
+            products.Id = _productsList.Max(p => p.Id) + 1;
+            _productsList.Add(products);
+            return products;
+        }
 
         public IEnumerable<Products> GetAllProducts()
         {

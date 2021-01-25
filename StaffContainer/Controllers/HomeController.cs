@@ -32,9 +32,20 @@ namespace StaffContainer.Controllers
             };
             return View(homeDetailsViewModel);
         }
-
+        [HttpGet]
         public ViewResult Create()
         {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Products products)
+        {
+            if (ModelState.IsValid)
+            {
+                Products newProduct = _productsRepository.Add(products);
+                return RedirectToAction("details", new { id = newProduct.Id });
+            }
+
             return View();
         }
     }
