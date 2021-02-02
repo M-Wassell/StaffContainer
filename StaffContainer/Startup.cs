@@ -36,7 +36,7 @@ namespace StaffContainer
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseRouting();
 
             app.UseStaticFiles();
